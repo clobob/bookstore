@@ -100,3 +100,17 @@ idea community 配置tomcat简介：
 		</property>
 	</bean>
    ```
+   
+3. 关于mybatis配置    
+SqlMapConfig.xml
+```
+<configuration>
+	<!-- 配置分页插件 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageHelper">
+			<!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库-->        
+        	<property name="dialect" value="mysql"/>
+		</plugin>
+	</plugins>
+</configuration>
+```
