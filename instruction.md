@@ -35,7 +35,8 @@ idea community 配置tomcat简介：
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 ```
-2. spring 配置
+2. spring 配置    
+
    a. applicationContext_service.xml
    ```
    <!-- 负责将net.togogo.empmvc141.service包及子包中，有@Service,@Compoment,@Repository注解的组件加载到spring中 -->
@@ -74,11 +75,11 @@ idea community 配置tomcat简介：
    c. springmvc_config.xml
    ```
    	<!-- 必须要加上这一行代码，spring会把base-package包下面的类当成控制器来处理 -->
-    <context:component-scan base-package="com.laver.bookstore.controller"/>
+    	<context:component-scan base-package="com.laver.bookstore.controller"/>
 
 
 
-<!-- 配置视图解析器 -->
+	<!-- 配置视图解析器 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/" />
